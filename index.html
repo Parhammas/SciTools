@@ -1,0 +1,2378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SciTools</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="site-header">
+
+        <button
+            class="site-brand"
+            onclick="showHome()"
+        >
+            <span class="brand-mark"></span>
+            SciTools
+        </button>
+
+
+        <nav class="site-nav">
+
+            <button onclick="showTool('graph-tool')">
+                Graphing
+            </button>
+
+            <button onclick="showTool('calculator-tool')">
+                Calculator
+            </button>
+
+            <button onclick="showTool('converter-tool')">
+                Converter
+            </button>
+
+            <button onclick="showTool('lab-coach-tool')">
+                Lab Coach
+            </button>
+
+            <button
+                class="feedback-nav-button"
+                onclick="showTool('feedback-tool')"
+            >
+                Feedback
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HOME
+    ========================== -->
+
+    <main class="hero" id="home">
+
+        <!-- HERO -->
+
+        <div class="hero-layout">
+
+            <section class="hero-copy">
+
+                <p class="eyebrow">
+                    STUDENT SCIENCE TOOLKIT
+                </p>
+
+                <h1>
+                    SciTools
+                </h1>
+
+                <p class="subtitle">
+                    Science made simpler.
+                </p>
+
+                <p class="description">
+                    Practical tools for high-school science labs,
+                    calculations, data analysis, and experimental design.
+                </p>
+
+                <div class="hero-details">
+
+                    <span>Lab data</span>
+
+                    <span class="dot"></span>
+
+                    <span>Statistics</span>
+
+                    <span class="dot"></span>
+
+                    <span>Unit conversions</span>
+
+                    <span class="dot"></span>
+
+                    <span>Lab planning</span>
+
+                </div>
+
+            </section>
+
+
+            <!-- SCIENCE PANEL -->
+
+            <aside
+                class="science-panel"
+                aria-hidden="true"
+            >
+
+                <div class="science-panel-header">
+
+                    <span>
+                        Experimental data
+                    </span>
+
+                    <span>
+                        R²
+                    </span>
+
+                </div>
+
+
+                <div class="mini-chart">
+
+                    <div class="chart-grid horizontal-one"></div>
+                    <div class="chart-grid horizontal-two"></div>
+                    <div class="chart-grid horizontal-three"></div>
+
+                    <div class="chart-grid vertical-one"></div>
+                    <div class="chart-grid vertical-two"></div>
+                    <div class="chart-grid vertical-three"></div>
+
+                    <div class="trend-line"></div>
+
+                    <span class="data-point point-one"></span>
+                    <span class="data-point point-two"></span>
+                    <span class="data-point point-three"></span>
+                    <span class="data-point point-four"></span>
+                    <span class="data-point point-five"></span>
+
+                </div>
+
+
+                <div class="science-values">
+
+                    <div>
+                        <span class="value-label">
+                            Mean
+                        </span>
+
+                        <strong>
+                            x̄
+                        </strong>
+                    </div>
+
+
+                    <div>
+                        <span class="value-label">
+                            Spread
+                        </span>
+
+                        <strong>
+                            σ
+                        </strong>
+                    </div>
+
+
+                    <div>
+                        <span class="value-label">
+                            Error
+                        </span>
+
+                        <strong>
+                            %
+                        </strong>
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+
+        <!-- =========================
+             GENERAL TOOLS
+        ========================== -->
+
+        <section class="tools-area">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        GENERAL SCIENCE TOOLS
+                    </p>
+
+                    <h2>
+                        Analyze your lab work
+                    </h2>
+
+                </div>
+
+                <p>
+                    Useful across chemistry, physics, and biology.
+                </p>
+
+            </div>
+
+
+            <div class="tool-grid">
+
+                <!-- GRAPHING -->
+
+                <button
+                    class="tool-card"
+                    onclick="showTool('graph-tool')"
+                >
+
+                    <div class="card-top">
+
+                        <span class="tool-number">
+                            01
+                        </span>
+
+                        <span class="tool-category">
+                            DATA
+                        </span>
+
+                    </div>
+
+
+                    <div class="simple-icon graph-icon">
+
+                        <span class="axis-v"></span>
+                        <span class="axis-h"></span>
+
+                        <span class="graph-dot gd1"></span>
+                        <span class="graph-dot gd2"></span>
+                        <span class="graph-dot gd3"></span>
+
+                        <span class="graph-line"></span>
+
+                    </div>
+
+
+                    <h3>
+                        Graph & Lab Data
+                    </h3>
+
+                    <p>
+                        Plot experimental data, generate linear trendlines,
+                        calculate R², and export graphs.
+                    </p>
+
+                    <span class="tool-link">
+                        Open graphing →
+                    </span>
+
+                </button>
+
+
+                <!-- CALCULATOR -->
+
+                <button
+                    class="tool-card"
+                    onclick="showTool('calculator-tool')"
+                >
+
+                    <div class="card-top">
+
+                        <span class="tool-number">
+                            02
+                        </span>
+
+                        <span class="tool-category">
+                            ANALYSIS
+                        </span>
+
+                    </div>
+
+
+                    <div class="simple-icon calculation-icon">
+
+                        <span>x̄</span>
+                        <span>σ</span>
+                        <span>%</span>
+
+                    </div>
+
+
+                    <h3>
+                        Lab Calculator
+                    </h3>
+
+                    <p>
+                        Calculate statistics, standard deviation,
+                        percent error, and percent difference.
+                    </p>
+
+                    <span class="tool-link">
+                        Open calculator →
+                    </span>
+
+                </button>
+
+
+                <!-- CONVERTER -->
+
+                <button
+                    class="tool-card"
+                    onclick="showTool('converter-tool')"
+                >
+
+                    <div class="card-top">
+
+                        <span class="tool-number">
+                            03
+                        </span>
+
+                        <span class="tool-category">
+                            UNITS
+                        </span>
+
+                    </div>
+
+
+                    <div class="simple-icon unit-icon">
+
+                        <span>
+                            m
+                        </span>
+
+                        <span class="unit-arrow">
+                            ⇄
+                        </span>
+
+                        <span>
+                            cm
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Unit Converter
+                    </h3>
+
+                    <p>
+                        Convert measurements commonly used in
+                        science and laboratory work.
+                    </p>
+
+                    <span class="tool-link">
+                        Open converter →
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             LAB COACH
+        ========================== -->
+
+        <section class="coach-home-area">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        EXPERIMENTAL SKILLS
+                    </p>
+
+                    <h2>
+                        Apply what you know
+                    </h2>
+
+                </div>
+
+                <p>
+                    Go beyond formulas and build stronger lab reasoning.
+                </p>
+
+            </div>
+
+
+            <button
+                class="coach-feature-card"
+                onclick="showTool('lab-coach-tool')"
+            >
+
+                <div class="coach-feature-intro">
+
+                    <div class="coach-feature-label">
+                        LAB REPORT COACH
+                    </div>
+
+                    <h3>
+                        Plan, analyze, and evaluate an experiment
+                    </h3>
+
+                    <p>
+                        Identify variables, build a hypothesis,
+                        choose an appropriate graph, understand
+                        experimental error, and organize a strong conclusion.
+                    </p>
+
+                    <span class="tool-link">
+                        Open Lab Coach →
+                    </span>
+
+                </div>
+
+
+                <div class="coach-feature-steps">
+
+                    <div>
+                        <span>01</span>
+                        <strong>Plan</strong>
+                        <p>Variables and hypothesis</p>
+                    </div>
+
+                    <div>
+                        <span>02</span>
+                        <strong>Analyze</strong>
+                        <p>Graphs and data</p>
+                    </div>
+
+                    <div>
+                        <span>03</span>
+                        <strong>Evaluate</strong>
+                        <p>Error and uncertainty</p>
+                    </div>
+
+                    <div>
+                        <span>04</span>
+                        <strong>Conclude</strong>
+                        <p>Evidence and reasoning</p>
+                    </div>
+
+                </div>
+
+            </button>
+
+        </section>
+
+
+        <!-- =========================
+             FEEDBACK CTA
+        ========================== -->
+
+        <section class="feedback-home-area">
+
+            <div class="feedback-home-card">
+
+                <div>
+
+                    <p class="section-label">
+                        HELP IMPROVE SCITOOLS
+                    </p>
+
+                    <h3>
+                        Found a bug or have an idea?
+                    </h3>
+
+                    <p>
+                        Student feedback helps decide what gets fixed,
+                        changed, or added next.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="feedback-home-button"
+                    onclick="showTool('feedback-tool')"
+                >
+                    Send Feedback →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <footer class="home-footer">
+
+            <span>
+                SciTools
+            </span>
+
+            <button onclick="showTool('feedback-tool')">
+                Send feedback
+            </button>
+
+            <span>
+                Built for high-school science students.
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =========================
+         GRAPH TOOL
+    ========================== -->
+
+    <section
+        id="graph-tool"
+        class="tool-section hidden"
+    >
+
+        <div class="tool-content">
+
+            <button
+                class="back-button"
+                onclick="goHome()"
+            >
+                ← Back
+            </button>
+
+
+            <div class="tool-heading">
+
+                <p class="section-label">
+                    DATA
+                </p>
+
+                <h2>
+                    Graph & Lab Data
+                </h2>
+
+                <p class="tool-description">
+                    Create graphs, examine relationships in experimental
+                    data, and export your results.
+                </p>
+
+            </div>
+
+
+            <div class="content-divider"></div>
+
+
+            <div class="graph-form">
+
+                <div class="form-group">
+
+                    <label for="graph-title">
+                        Graph Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="graph-title"
+                        placeholder="Example: Temperature vs Reaction Rate"
+                    >
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="x-label">
+                            X-Axis Label
+                        </label>
+
+                        <input
+                            type="text"
+                            id="x-label"
+                            placeholder="Example: Temperature (°C)"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="y-label">
+                            Y-Axis Label
+                        </label>
+
+                        <input
+                            type="text"
+                            id="y-label"
+                            placeholder="Example: Reaction Rate (mL/s)"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="x-values">
+                            X Values
+                        </label>
+
+                        <textarea
+                            id="x-values"
+                            placeholder="Example: 10, 20, 30, 40, 50"
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="y-values">
+                            Y Values
+                        </label>
+
+                        <textarea
+                            id="y-values"
+                            placeholder="Example: 2.1, 3.4, 5.2, 6.8, 7.1"
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="graph-type">
+                        Graph Type
+                    </label>
+
+                    <select id="graph-type">
+
+                        <option value="scatter">
+                            Scatter Plot
+                        </option>
+
+                        <option value="line">
+                            Line Graph
+                        </option>
+
+                        <option value="bar">
+                            Bar Graph
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    onclick="generateGraph()"
+                >
+                    Generate Graph
+                </button>
+
+            </div>
+
+
+            <div class="graph-preview">
+
+                <div class="preview-heading">
+
+                    <div>
+
+                        <p class="section-label">
+                            OUTPUT
+                        </p>
+
+                        <h3>
+                            Graph Preview
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <canvas id="myChart"></canvas>
+
+
+                <div
+                    id="trendline-results"
+                    class="trendline-results"
+                ></div>
+
+
+                <div
+                    id="graph-explanation"
+                    class="explanation-box hidden"
+                >
+
+                    <h4>
+                        Understanding the results
+                    </h4>
+
+                    <p>
+                        The trendline shows the best-fitting straight-line
+                        relationship between your X and Y values.
+                    </p>
+
+                    <p>
+                        <strong>R²</strong> describes how closely the data
+                        follows that linear trend. Values closer to 1
+                        generally indicate a stronger linear fit.
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="download-graph-button"
+                    class="secondary-button hidden"
+                    onclick="downloadGraph()"
+                >
+                    Download Graph as PNG
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LAB CALCULATOR
+    ========================== -->
+
+    <section
+        id="calculator-tool"
+        class="tool-section hidden"
+    >
+
+        <div class="tool-content">
+
+            <button
+                class="back-button"
+                onclick="goHome()"
+            >
+                ← Back
+            </button>
+
+
+            <div class="tool-heading">
+
+                <p class="section-label">
+                    ANALYSIS
+                </p>
+
+                <h2>
+                    Lab Calculator
+                </h2>
+
+                <p class="tool-description">
+                    Analyze experimental results using common
+                    high-school science calculations.
+                </p>
+
+            </div>
+
+
+            <div class="content-divider"></div>
+
+
+            <div class="calculator-section">
+
+                <h3>
+                    Statistics
+                </h3>
+
+                <p class="small-description">
+                    Enter numbers separated by commas.
+                </p>
+
+
+                <div class="form-group">
+
+                    <label for="stats-values">
+                        Data Values
+                    </label>
+
+                    <textarea
+                        id="stats-values"
+                        placeholder="Example: 12.4, 13.1, 11.9, 12.8"
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Standard Deviation Type
+                    </label>
+
+
+                    <div class="radio-row">
+
+                        <label class="radio-option">
+
+                            <input
+                                type="radio"
+                                name="sd-type"
+                                value="population"
+                                checked
+                            >
+
+                            Population
+
+                        </label>
+
+
+                        <label class="radio-option">
+
+                            <input
+                                type="radio"
+                                name="sd-type"
+                                value="sample"
+                            >
+
+                            Sample
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    onclick="calculateStatistics()"
+                >
+                    Calculate Statistics
+                </button>
+
+
+                <div
+                    id="stats-results"
+                    class="results-grid hidden"
+                >
+
+                    <div class="result-card">
+                        <span>Mean</span>
+                        <strong id="mean-result">—</strong>
+                    </div>
+
+                    <div class="result-card">
+                        <span>Median</span>
+                        <strong id="median-result">—</strong>
+                    </div>
+
+                    <div class="result-card">
+                        <span>Range</span>
+                        <strong id="range-result">—</strong>
+                    </div>
+
+                    <div class="result-card">
+                        <span>Standard Deviation</span>
+                        <strong id="sd-result">—</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="explanation-box">
+
+                    <h4>
+                        Understanding the results
+                    </h4>
+
+                    <p>
+                        <strong>Mean:</strong>
+                        the average of all measurements.
+                    </p>
+
+                    <p>
+                        <strong>Median:</strong>
+                        the middle value when data is placed in order.
+                    </p>
+
+                    <p>
+                        <strong>Range:</strong>
+                        the difference between the largest and smallest value.
+                    </p>
+
+                    <p>
+                        <strong>Standard deviation:</strong>
+                        describes how spread out measurements are from the mean.
+                    </p>
+
+                    <p>
+                        Use population standard deviation when the values
+                        represent the entire group being studied. Use sample
+                        standard deviation when the data is a sample used to
+                        estimate a larger population.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="calculator-section">
+
+                <h3>
+                    Percent Error
+                </h3>
+
+                <p class="small-description">
+                    Compare an experimental result with an accepted value.
+                </p>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="experimental-value">
+                            Experimental Value
+                        </label>
+
+                        <input
+                            type="number"
+                            id="experimental-value"
+                            placeholder="Example: 9.6"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="accepted-value">
+                            Accepted Value
+                        </label>
+
+                        <input
+                            type="number"
+                            id="accepted-value"
+                            placeholder="Example: 9.81"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    onclick="calculatePercentError()"
+                >
+                    Calculate Percent Error
+                </button>
+
+
+                <div
+                    id="error-result"
+                    class="single-result hidden"
+                ></div>
+
+
+                <div class="explanation-box">
+
+                    <h4>
+                        Formula
+                    </h4>
+
+                    <p class="formula">
+                        Percent Error =
+                        |Experimental − Accepted| ÷ |Accepted| × 100%
+                    </p>
+
+                    <p>
+                        Percent error shows how far an experimental
+                        result is from an accepted or theoretical value.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="calculator-section">
+
+                <h3>
+                    Percent Difference
+                </h3>
+
+                <p class="small-description">
+                    Compare two experimental measurements.
+                </p>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="difference-value-one">
+                            Value 1
+                        </label>
+
+                        <input
+                            type="number"
+                            id="difference-value-one"
+                            placeholder="Example: 10.2"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="difference-value-two">
+                            Value 2
+                        </label>
+
+                        <input
+                            type="number"
+                            id="difference-value-two"
+                            placeholder="Example: 9.8"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    onclick="calculatePercentDifference()"
+                >
+                    Calculate Percent Difference
+                </button>
+
+
+                <div
+                    id="difference-result"
+                    class="single-result hidden"
+                ></div>
+
+
+                <div class="explanation-box">
+
+                    <h4>
+                        Formula
+                    </h4>
+
+                    <p class="formula">
+                        Percent Difference =
+                        |Value 1 − Value 2| ÷ Average of the two values × 100%
+                    </p>
+
+                    <p>
+                        Percent difference compares two measured values
+                        when neither is treated as the accepted answer.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         UNIT CONVERTER
+    ========================== -->
+
+    <section
+        id="converter-tool"
+        class="tool-section hidden"
+    >
+
+        <div class="tool-content">
+
+            <button
+                class="back-button"
+                onclick="goHome()"
+            >
+                ← Back
+            </button>
+
+
+            <div class="tool-heading">
+
+                <p class="section-label">
+                    UNITS
+                </p>
+
+                <h2>
+                    Unit Converter
+                </h2>
+
+                <p class="tool-description">
+                    Convert common units used across chemistry,
+                    physics, biology, and laboratory work.
+                </p>
+
+            </div>
+
+
+            <div class="content-divider"></div>
+
+
+            <div class="converter-box">
+
+                <div class="form-group">
+
+                    <label for="conversion-category">
+                        Measurement Type
+                    </label>
+
+                    <select
+                        id="conversion-category"
+                        onchange="updateConverterUnits()"
+                    >
+
+                        <option value="length">
+                            Length
+                        </option>
+
+                        <option value="mass">
+                            Mass
+                        </option>
+
+                        <option value="volume">
+                            Volume
+                        </option>
+
+                        <option value="temperature">
+                            Temperature
+                        </option>
+
+                        <option value="time">
+                            Time
+                        </option>
+
+                        <option value="speed">
+                            Speed
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="converter-value">
+                        Value
+                    </label>
+
+                    <input
+                        type="number"
+                        id="converter-value"
+                        placeholder="Enter a value"
+                    >
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="from-unit">
+                            From
+                        </label>
+
+                        <select id="from-unit"></select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="to-unit">
+                            To
+                        </label>
+
+                        <select id="to-unit"></select>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    onclick="convertUnit()"
+                >
+                    Convert
+                </button>
+
+
+                <div
+                    id="conversion-result"
+                    class="conversion-result hidden"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LAB REPORT COACH
+    ========================== -->
+
+    <section
+        id="lab-coach-tool"
+        class="tool-section hidden"
+    >
+
+        <div class="tool-content coach-content">
+
+            <button
+                class="back-button"
+                onclick="goHome()"
+            >
+                ← Back
+            </button>
+
+
+            <div class="tool-heading">
+
+                <p class="section-label">
+                    EXPERIMENTAL SKILLS
+                </p>
+
+                <h2>
+                    Lab Report Coach
+                </h2>
+
+                <p class="tool-description">
+                    Work through the reasoning behind an experiment:
+                    plan variables, choose how to analyze the data,
+                    evaluate error, and organize your conclusion.
+                </p>
+
+            </div>
+
+
+            <div class="content-divider"></div>
+
+
+            <div class="coach-workflow">
+
+                <div>
+                    <span>01</span>
+                    <strong>Plan</strong>
+                    <p>Define what you are testing.</p>
+                </div>
+
+                <div>
+                    <span>02</span>
+                    <strong>Analyze</strong>
+                    <p>Choose how to display your data.</p>
+                </div>
+
+                <div>
+                    <span>03</span>
+                    <strong>Evaluate</strong>
+                    <p>Consider error and uncertainty.</p>
+                </div>
+
+                <div>
+                    <span>04</span>
+                    <strong>Conclude</strong>
+                    <p>Connect evidence to science.</p>
+                </div>
+
+            </div>
+
+
+            <!-- PLAN -->
+
+            <section class="coach-section">
+
+                <div class="coach-section-heading">
+
+                    <span class="coach-number">
+                        01
+                    </span>
+
+                    <div>
+
+                        <p class="section-label">
+                            EXPERIMENT DESIGN
+                        </p>
+
+                        <h3>
+                            Plan an Experiment
+                        </h3>
+
+                        <p>
+                            Turn a question into a clear experimental plan.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="research-question">
+                        Research Question
+                    </label>
+
+                    <textarea
+                        id="research-question"
+                        placeholder="Example: How does water temperature affect the time required for an effervescent tablet to dissolve?"
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="independent-variable">
+                            Independent Variable
+                        </label>
+
+                        <input
+                            type="text"
+                            id="independent-variable"
+                            placeholder="What are you changing?"
+                        >
+
+                        <p class="field-help">
+                            The factor deliberately changed during the experiment.
+                        </p>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="dependent-variable">
+                            Dependent Variable
+                        </label>
+
+                        <input
+                            type="text"
+                            id="dependent-variable"
+                            placeholder="What are you measuring?"
+                        >
+
+                        <p class="field-help">
+                            The result measured in response to the change.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="iv-units">
+                            Independent Variable Units
+                        </label>
+
+                        <input
+                            type="text"
+                            id="iv-units"
+                            placeholder="Example: °C"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="dv-units">
+                            Dependent Variable Units
+                        </label>
+
+                        <input
+                            type="text"
+                            id="dv-units"
+                            placeholder="Example: seconds"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="controlled-variables">
+                        Controlled Variables
+                    </label>
+
+                    <textarea
+                        id="controlled-variables"
+                        placeholder="Example: tablet mass, water volume, container size"
+                    ></textarea>
+
+                    <p class="field-help">
+                        Factors kept consistent so they do not influence the result.
+                    </p>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="hypothesis">
+                        Hypothesis
+                    </label>
+
+                    <textarea
+                        id="hypothesis"
+                        placeholder="Example: If water temperature increases, then dissolving time will decrease because particles will collide more frequently and with greater energy."
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    onclick="buildExperimentPlan()"
+                >
+                    Build Experiment Plan
+                </button>
+
+
+                <div
+                    id="experiment-plan-output"
+                    class="coach-output hidden"
+                >
+
+                    <div class="output-heading">
+
+                        <div>
+
+                            <p class="section-label">
+                                YOUR PLAN
+                            </p>
+
+                            <h4>
+                                Experiment Summary
+                            </h4>
+
+                        </div>
+
+
+                        <button
+                            class="small-action-button"
+                            onclick="copyExperimentPlan()"
+                        >
+                            Copy
+                        </button>
+
+                    </div>
+
+
+                    <div id="experiment-plan-text"></div>
+
+                </div>
+
+            </section>
+
+
+            <!-- GRAPH RECOMMENDER -->
+
+            <section class="coach-section">
+
+                <div class="coach-section-heading">
+
+                    <span class="coach-number">
+                        02
+                    </span>
+
+                    <div>
+
+                        <p class="section-label">
+                            DATA ANALYSIS
+                        </p>
+
+                        <h3>
+                            Which Graph Should I Use?
+                        </h3>
+
+                        <p>
+                            Choose how your variables are structured and
+                            SciTools will suggest a graph.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="iv-data-type">
+                            Independent Variable
+                        </label>
+
+                        <select id="iv-data-type">
+
+                            <option value="">
+                                Select a type
+                            </option>
+
+                            <option value="continuous">
+                                Continuous numerical values
+                            </option>
+
+                            <option value="time">
+                                Time or ordered progression
+                            </option>
+
+                            <option value="categorical">
+                                Categories or groups
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="dv-data-type">
+                            Dependent Variable
+                        </label>
+
+                        <select id="dv-data-type">
+
+                            <option value="">
+                                Select a type
+                            </option>
+
+                            <option value="numerical">
+                                Numerical measurement
+                            </option>
+
+                            <option value="categorical">
+                                Category / count
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    onclick="recommendGraph()"
+                >
+                    Recommend a Graph
+                </button>
+
+
+                <div
+                    id="graph-recommendation"
+                    class="coach-output hidden"
+                ></div>
+
+            </section>
+
+
+            <!-- ERROR GUIDE -->
+
+            <section class="coach-section">
+
+                <div class="coach-section-heading">
+
+                    <span class="coach-number">
+                        03
+                    </span>
+
+                    <div>
+
+                        <p class="section-label">
+                            EVALUATION
+                        </p>
+
+                        <h3>
+                            Error & Uncertainty Guide
+                        </h3>
+
+                        <p>
+                            Identify what may have affected your results
+                            and describe it more precisely.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="error-guide-grid">
+
+                    <details class="guide-card">
+
+                        <summary>
+                            Random Error
+                        </summary>
+
+                        <div>
+
+                            <p>
+                                Random error causes measurements to vary
+                                unpredictably between repeated trials.
+                            </p>
+
+                            <p>
+                                <strong>Example:</strong>
+                                reaction time causes slightly different
+                                stopwatch readings each trial.
+                            </p>
+
+                            <p>
+                                <strong>Possible improvement:</strong>
+                                repeat more trials and calculate an average.
+                            </p>
+
+                        </div>
+
+                    </details>
+
+
+                    <details class="guide-card">
+
+                        <summary>
+                            Systematic Error
+                        </summary>
+
+                        <div>
+
+                            <p>
+                                Systematic error shifts measurements in the
+                                same direction because of a consistent problem.
+                            </p>
+
+                            <p>
+                                <strong>Example:</strong>
+                                a balance reads 0.50 g too high every time.
+                            </p>
+
+                            <p>
+                                <strong>Possible improvement:</strong>
+                                calibrate equipment or correct the procedure.
+                            </p>
+
+                        </div>
+
+                    </details>
+
+
+                    <details class="guide-card">
+
+                        <summary>
+                            Measurement Uncertainty
+                        </summary>
+
+                        <div>
+
+                            <p>
+                                Every measuring device has a limit to
+                                how precisely it can be read.
+                            </p>
+
+                            <p>
+                                <strong>Example:</strong>
+                                a ruler marked every millimetre cannot
+                                provide infinitely precise measurements.
+                            </p>
+
+                        </div>
+
+                    </details>
+
+
+                    <details class="guide-card">
+
+                        <summary>
+                            Procedural Mistake
+                        </summary>
+
+                        <div>
+
+                            <p>
+                                A mistake is different from unavoidable
+                                experimental uncertainty.
+                            </p>
+
+                            <p>
+                                Instead of simply writing "human error,"
+                                identify the specific event and explain
+                                how it could affect the result.
+                            </p>
+
+                        </div>
+
+                    </details>
+
+                </div>
+
+
+                <div class="coach-tip">
+
+                    <strong>
+                        Avoid:
+                    </strong>
+
+                    “Human error affected the experiment.”
+
+                    <br>
+
+                    <strong>
+                        Better:
+                    </strong>
+
+                    “Some solution remained on the inside of the graduated
+                    cylinder during transfer, so the actual volume delivered
+                    may have been lower than the recorded volume.”
+
+                </div>
+
+            </section>
+
+
+            <!-- CONCLUSION -->
+
+            <section class="coach-section">
+
+                <div class="coach-section-heading">
+
+                    <span class="coach-number">
+                        04
+                    </span>
+
+                    <div>
+
+                        <p class="section-label">
+                            CONCLUSION
+                        </p>
+
+                        <h3>
+                            Build Your Conclusion Outline
+                        </h3>
+
+                        <p>
+                            Organize the evidence and reasoning before
+                            writing the final paragraph in your own words.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="conclusion-claim">
+                        Claim
+                    </label>
+
+                    <textarea
+                        id="conclusion-claim"
+                        placeholder="What did the experiment show? Answer the original research question."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="conclusion-evidence">
+                        Evidence
+                    </label>
+
+                    <textarea
+                        id="conclusion-evidence"
+                        placeholder="Which measurements, trends, averages, or graph results support your claim?"
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="conclusion-reasoning">
+                        Scientific Reasoning
+                    </label>
+
+                    <textarea
+                        id="conclusion-reasoning"
+                        placeholder="Which scientific idea explains why the observed relationship occurred?"
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="conclusion-limitation">
+                            Limitation or Source of Error
+                        </label>
+
+                        <textarea
+                            id="conclusion-limitation"
+                            placeholder="Identify a specific limitation and how it may have affected the results."
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="conclusion-improvement">
+                            Improvement
+                        </label>
+
+                        <textarea
+                            id="conclusion-improvement"
+                            placeholder="What specific change could improve the experiment?"
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    onclick="buildConclusionOutline()"
+                >
+                    Build Conclusion Outline
+                </button>
+
+
+                <div
+                    id="conclusion-output"
+                    class="coach-output hidden"
+                >
+
+                    <div class="output-heading">
+
+                        <div>
+
+                            <p class="section-label">
+                                YOUR OUTLINE
+                            </p>
+
+                            <h4>
+                                Conclusion Structure
+                            </h4>
+
+                        </div>
+
+
+                        <button
+                            class="small-action-button"
+                            onclick="copyConclusionOutline()"
+                        >
+                            Copy
+                        </button>
+
+                    </div>
+
+
+                    <div id="conclusion-output-text"></div>
+
+                </div>
+
+            </section>
+
+
+            <section class="connected-tools">
+
+                <p class="section-label">
+                    CONTINUE YOUR ANALYSIS
+                </p>
+
+                <h3>
+                    Use the rest of SciTools
+                </h3>
+
+
+                <div class="connected-grid">
+
+                    <button
+                        onclick="showTool('graph-tool')"
+                    >
+                        <strong>
+                            Graph your results
+                        </strong>
+
+                        <span>
+                            Open Graph & Lab Data →
+                        </span>
+                    </button>
+
+
+                    <button
+                        onclick="showTool('calculator-tool')"
+                    >
+                        <strong>
+                            Analyze your measurements
+                        </strong>
+
+                        <span>
+                            Open Lab Calculator →
+                        </span>
+                    </button>
+
+
+                    <button
+                        onclick="showTool('converter-tool')"
+                    >
+                        <strong>
+                            Check your units
+                        </strong>
+
+                        <span>
+                            Open Unit Converter →
+                        </span>
+                    </button>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FEEDBACK
+    ========================== -->
+
+    <section
+        id="feedback-tool"
+        class="tool-section hidden"
+    >
+
+        <div class="tool-content feedback-content">
+
+            <button
+                class="back-button"
+                onclick="goHome()"
+            >
+                ← Back
+            </button>
+
+
+            <div class="tool-heading">
+
+                <p class="section-label">
+                    FEEDBACK
+                </p>
+
+                <h2>
+                    Help Improve SciTools
+                </h2>
+
+                <p class="tool-description">
+                    Found a bug, noticed something confusing, or have an idea
+                    for a useful feature? Send it here.
+                </p>
+
+            </div>
+
+
+            <div class="content-divider"></div>
+
+
+            <div class="feedback-layout">
+
+                <form
+                    id="feedback-form"
+                    class="feedback-form"
+                    action="https://formspree.io/f/mgaonrgy"
+                    method="POST"
+                    onsubmit="submitFeedback(event)"
+                >
+
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="New SciTools Feedback"
+                    >
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="feedback-type">
+                                Feedback Type
+                            </label>
+
+                            <select
+                                id="feedback-type"
+                                name="feedback_type"
+                                required
+                            >
+
+                                <option value="">
+                                    Choose a category
+                                </option>
+
+                                <option value="Bug Report">
+                                    Bug Report
+                                </option>
+
+                                <option value="Feature Suggestion">
+                                    Feature Suggestion
+                                </option>
+
+                                <option value="Something Confusing">
+                                    Something Confusing
+                                </option>
+
+                                <option value="General Feedback">
+                                    General Feedback
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="feedback-area">
+                                Where did you notice it?
+                            </label>
+
+                            <select
+                                id="feedback-area"
+                                name="area"
+                            >
+
+                                <option value="General / Homepage">
+                                    General / Homepage
+                                </option>
+
+                                <option value="Graph & Lab Data">
+                                    Graph & Lab Data
+                                </option>
+
+                                <option value="Lab Calculator">
+                                    Lab Calculator
+                                </option>
+
+                                <option value="Unit Converter">
+                                    Unit Converter
+                                </option>
+
+                                <option value="Lab Report Coach">
+                                    Lab Report Coach
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            How useful is SciTools so far?
+                            <span class="optional-label">
+                                Optional
+                            </span>
+                        </label>
+
+
+                        <div class="rating-row">
+
+                            <label class="rating-option">
+
+                                <input
+                                    type="radio"
+                                    name="usefulness_rating"
+                                    value="1"
+                                >
+
+                                <span>1</span>
+
+                            </label>
+
+
+                            <label class="rating-option">
+
+                                <input
+                                    type="radio"
+                                    name="usefulness_rating"
+                                    value="2"
+                                >
+
+                                <span>2</span>
+
+                            </label>
+
+
+                            <label class="rating-option">
+
+                                <input
+                                    type="radio"
+                                    name="usefulness_rating"
+                                    value="3"
+                                >
+
+                                <span>3</span>
+
+                            </label>
+
+
+                            <label class="rating-option">
+
+                                <input
+                                    type="radio"
+                                    name="usefulness_rating"
+                                    value="4"
+                                >
+
+                                <span>4</span>
+
+                            </label>
+
+
+                            <label class="rating-option">
+
+                                <input
+                                    type="radio"
+                                    name="usefulness_rating"
+                                    value="5"
+                                >
+
+                                <span>5</span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="rating-labels">
+
+                            <span>
+                                Not very useful
+                            </span>
+
+                            <span>
+                                Very useful
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="feedback-message">
+                            Your Feedback
+                        </label>
+
+                        <textarea
+                            id="feedback-message"
+                            name="message"
+                            class="feedback-message"
+                            required
+                            maxlength="2000"
+                            placeholder="Describe the bug, confusing part, or something you think would make SciTools more useful..."
+                            oninput="updateFeedbackCount()"
+                        ></textarea>
+
+
+                        <div class="character-count">
+                            <span id="feedback-character-count">
+                                0
+                            </span>
+                            / 2000
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="feedback-email">
+                            Email
+                            <span class="optional-label">
+                                Optional
+                            </span>
+                        </label>
+
+                        <input
+                            type="email"
+                            id="feedback-email"
+                            name="email"
+                            placeholder="Only if you want a reply"
+                        >
+
+                        <p class="field-help">
+                            You can leave this blank and submit feedback anonymously.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        id="feedback-submit-button"
+                        class="primary-button feedback-submit-button"
+                        type="submit"
+                    >
+                        Submit Feedback
+                    </button>
+
+
+                    <p
+                        id="feedback-status"
+                        class="feedback-status hidden"
+                        aria-live="polite"
+                    ></p>
+
+                </form>
+
+
+                <aside class="feedback-side-panel">
+
+                    <p class="section-label">
+                        GOOD FEEDBACK HELPS
+                    </p>
+
+                    <h3>
+                        What should I include?
+                    </h3>
+
+
+                    <div class="feedback-tip">
+
+                        <strong>
+                            For a bug
+                        </strong>
+
+                        <p>
+                            Say which tool you were using, what you entered,
+                            what you expected, and what happened instead.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feedback-tip">
+
+                        <strong>
+                            For a suggestion
+                        </strong>
+
+                        <p>
+                            Explain what problem the feature would help a
+                            student solve.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feedback-tip">
+
+                        <strong>
+                            If something is confusing
+                        </strong>
+
+                        <p>
+                            Mention the exact wording, button, calculation,
+                            or explanation that was unclear.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feedback-example">
+
+                        <span>
+                            Example
+                        </span>
+
+                        <p>
+                            “When I entered data copied from Google Sheets,
+                            the graph tool would not accept it because the
+                            numbers were on separate lines.”
+                        </p>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+
+            <div
+                id="feedback-success"
+                class="feedback-success hidden"
+            >
+
+                <div class="success-mark">
+                    ✓
+                </div>
+
+                <div>
+
+                    <h3>
+                        Thanks for helping improve SciTools.
+                    </h3>
+
+                    <p>
+                        Your feedback was submitted successfully.
+                    </p>
+
+                </div>
+
+                <button
+                    class="secondary-button"
+                    onclick="resetFeedbackForm()"
+                >
+                    Send another response
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
